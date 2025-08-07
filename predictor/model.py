@@ -11,5 +11,5 @@ def build_lstm_model(input_shape):
     model.add(Dropout(0.2))
     model.add(Dense(units=1))  # Predicting the closing price
 
-    model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
+    model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error', metrics=["accuracy"])
     return model
